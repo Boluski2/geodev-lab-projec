@@ -2,7 +2,7 @@
 
 ## The Questions
 
-**Which settlements in Ikosi-Ketu, Lagos, are located more than 5 km by road from the nearest healthcare facility?**
+**Which settlements in Kosofe, Lagos, are located more than 5 km by road from the nearest healthcare facility?**
 
 ## Why It Matters
 

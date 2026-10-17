@@ -45,3 +45,55 @@ uv --version
 ## Key Takeaway
 
 I learned how uv simplifies Python project setup, dependency management, environment synchronization, and script execution. I also learned how `pyproject.toml` and `uv.lock` help keep project dependencies organized and reproducible.
+
+
+
+## Week 7: Learning Python Fundamentals — Analysing Ward Data
+
+### Overview
+
+This week, I learned the fundamentals of programming in Python and applied them to real-world ward data using a CSV file. I practised reading data, converting values, applying conditions, and classifying wards based on their area in square kilometres.
+
+### What I Learned
+
+- **Variables:** Understanding how variables store values and why the equals sign (`=`) assigns a value.
+- **Data types:** Learning the difference between strings and numbers, including why `"5" + "5"` produces `"55"`.
+- **Lists:** Understanding how lists work and how indexing starts from zero.
+- **Loops:** Using `for` loops to process multiple wards in a CSV file.
+- **Conditions:** Using `if` and `else` statements to classify wards based on their area.
+- **Functions:** Learning how functions help organize reusable code.
+- **Error handling:** Practising how to read Python error messages calmly, starting from the bottom of a traceback.
+
+### Practical Project: `analyse.py`
+
+I worked with a `wards.csv` file containing ward names and their areas. The script reads the CSV file, processes each ward, converts its area to a numeric value, and classifies the ward as either large or small.
+
+The classification rule is:
+
+- **Large:** Ward area is greater than 9 km².
+- **Small:** Ward area is 9 km² or less.
+
+### Code Example
+
+```python
+with open("wards.csv") as f:
+    lines = f.readlines()
+
+for line in lines[1:]:
+    parts = line.strip().split(",")
+    ward = parts[0]
+    area_km2 = float(parts[1])
+
+    if area_km2 > 9:
+        size = "large"
+    else:
+        size = "small"
+
+    print(ward, "is", size)
+```
+
+### Key Takeaway
+
+I learned how to move from basic Python concepts to writing a practical script that processes and classifies geographical data. I also practised understanding code line by line, reading errors, and building a working solution step by step.
+
+**Week 7 deliverable:** `analyse.py` reads `wards.csv`, converts each ward's area to a numeric value, and classifies each ward as large or small based on the 9 km² threshold.
